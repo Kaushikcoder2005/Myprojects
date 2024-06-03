@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <p>Enter your text to convert into QR code </p>
+        <input type="text" placeholder="text or URL" id="txt">
+        <button onclick="QRgenerator()">QR generator </button>
+        <div class="imgtag">
+            <img src="" id="imgs">
+        </div>
+    </div>
+</body>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: #212121;
+        color: aliceblue1;
+        
+    }
+    .container{
+        width: 400px;
+        padding: 25px 35px;
+        position: absolute;
+        top: 50% ;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background: linear-gradient(135deg,#1fc6d2,#df1b1b);
+        text-align: center;
+        border-radius: 50px;
+
+    }
+    .container p{
+       font-weight: 600;
+       font-size: 15px;
+       margin-bottom: 8px;  
+    }
+    .container input{
+        width: 100%;
+         padding: 10px; 
+        margin: 10px 0 20px;
+        border-radius: 5px;
+        height: 50px;
+        border: 1px solid #1fc6d2;
+        outline: 0;
+        text-align: center; 
+
+    }
+    .container button{
+        /* width: 100%;   */
+        padding: 10px 50px; 
+        height: 50px;
+        background: #8e8fb2;
+        color: #fff;
+        border: 0;    
+        outline: 0;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 20px 20px 30px 20px;  
+    } 
+    #imgtag{
+        width: 200px;
+        border-radius: 5px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 1s;
+        
+    }
+    #imgtag img{
+        width: 100%;
+        padding: 10px
+    }
+    #imgs.show-img{
+        max-height: 300px;
+        margin: 10px auto;
+        border: 1px solid #d1d1d1;
+    }
+  
+</style>
+
+<script>
+    let input=document.querySelector('#txt')
+    let box = document.querySelector('.imgtag')
+    let image = document.querySelector('#imgs')
+function QRgenerator() {
+    image.src = 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=' +  input.value;
+    imgs.classList.add('show-img')
+}
+</script>
+</html>
