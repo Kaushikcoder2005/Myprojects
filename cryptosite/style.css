@@ -1,0 +1,115 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    background-image: url('images/background.png');
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+.navbar nav{
+    display: flex;
+    justify-content: flex-start;
+    padding-right: 15%;
+    
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    height: 80px;
+}
+
+.navbar nav a{
+    padding: 20px 25px;
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.navbar button{
+    margin: 20px;
+    padding: 0px 25px;
+    border-radius: 20px;
+    background: transparent;
+    color: aliceblue;
+    outline: none;
+    border: 1px solid white;
+    cursor: pointer;
+    height: 40px;
+
+}
+
+.navbar img{
+    height: 70px;
+    margin: 10px 5px;
+}
+
+.container .write{
+    color: aliceblue;
+    font-size: 40px;
+    padding: 150px 0px 0px 150px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container .write span{
+    color: gold;
+}
+
+.container .write p{
+    font-size: 15px;
+}
+
+.container .write button{
+    padding: 10px 25px;
+    border-radius: 20px;
+    outline: none;
+    background-color: rgb(255, 102, 0);
+    color:white;
+    border: 1px solid gold;
+    cursor: pointer;
+} 
+
+.footer{
+    color: white;
+    display: flex;
+    justify-content:flex-end;
+    padding-right:8% ;
+
+}
+
+.footer .btc{
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(217, 217, 217);
+    padding: 10px 15px;
+    margin: 0px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+
+}
+.footer .btc h4,h3{
+    padding-left: 10px;
+    
+}
+
+
+.footer .btc h4{
+    color: gold;
+}
+
+.footer .btc img{
+    width: 50px;
+    margin: 4px;
+
+}
+
+
+/* https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Cdogecoin&vs_currencies=usd */
+/* https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Cdogecoin&vs_currencies=usd */
