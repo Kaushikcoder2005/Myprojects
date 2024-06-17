@@ -7,6 +7,7 @@
 
 body{
     background-image: url('images/background.png');
+    
     background-size: cover;
     overflow-x: hidden;
 }
@@ -107,6 +108,21 @@ body{
 .footer .btc img{
     width: 50px;
     margin: 4px;
+
+}
+
+
+@media screen and (max-width:900px) {
+    
+body{
+    background-image: url('images/background.png');
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-position: center;
+    overflow-x: hidden;
+    background-attachment: fixed;
+}
 
 }
 
