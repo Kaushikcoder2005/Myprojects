@@ -5,8 +5,7 @@ const newsbox = document.querySelector(".mainsection")
 const searchbutton = document.querySelector('#btn')
 const searcharea = document.querySelector('#want-item')
 
-const newapi= 'https://newsapi.org/v2/everything?q=tesla&from=2024-06-04&sortBy=publishedAt&apiKey=b6d82d221eb5491fb6867c0b4b792fe3'
-
+const newapi= 'https://newsapi.org/v2/everything?q=tesla&from=2024-06-06&sortBy=publishedAt&apiKey=b6d82d221eb5491fb6867c0b4b792fe3'
 // for normal news
 
 fetch(api)
@@ -16,7 +15,7 @@ fetch(api)
 .then(function (newdata) {
     shownews(newdata)
 })
-
+.catch(error => console.error('There was a problem with the fetch operation:', error));
 
 
 // for custon serach news
@@ -27,13 +26,14 @@ searchbutton.addEventListener('click', function(){
 })
 
 function newsearch(val) {
-    fetch(`https://newsapi.org/v2/everything?q=${val}&from=2024-06-04&sortBy=publishedAt&apiKey=b6d82d221eb5491fb6867c0b4b792fe3`)
+    fetch(`https://newsapi.org/v2/everything?q=${val}&from=2024-06-06&sortBy=publishedAt&apiKey=b6d82d221eb5491fb6867c0b4b792fe3`)
     .then(function(newval){
         return newval.json()
     })
     .then(function(newval2){
         shownews(newval2)
     })
+    .catch(error => console.log('There was a problem with the fetch operation:', error));
 }
 
 
